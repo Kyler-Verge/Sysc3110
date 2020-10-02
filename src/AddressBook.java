@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class AddressBook {
     
-    //This has been editted in Github
+    //This has been edited in Github
 
     //Create BuddyInfo array list
     private ArrayList<BuddyInfo> addressBook;
@@ -17,6 +17,11 @@ public class AddressBook {
     //Constructor
     public AddressBook() {
         addressBook = new ArrayList<>();
+    }
+
+    //New method
+    public int NewMethod(){
+        return 1;
     }
 
     //Add a buddy to the array list
