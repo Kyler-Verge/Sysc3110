@@ -1,3 +1,10 @@
+/*
+AddressBook class
+Contains a AddressBook (ArrayList)
+That stores BuddyInfo's. Can add
+or remove BuddyInfo's from a book.
+ */
+
 import java.util.ArrayList;
 
 public class AddressBook {
@@ -12,12 +19,17 @@ public class AddressBook {
 
     //Add a buddy to the array list
     public void addBuddy(BuddyInfo bud) {
-        addressBook.add(bud);
+        if (bud != null) {
+            addressBook.add(bud);
+        }
     }
 
     //remove a buddy to the array list
-    public void removeBuddy(BuddyInfo bud) {
-        addressBook.remove(bud);
+    public BuddyInfo removeBuddy(int index) {
+        if (index >= 0 && index < addressBook.size()) {
+            return addressBook.remove(index);
+        }
+        return null;
     }
 
     //main method
@@ -25,6 +37,6 @@ public class AddressBook {
         BuddyInfo buddy = new BuddyInfo("Tom","Carleton","613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        addressBook.removeBuddy(buddy);
+        addressBook.removeBuddy(0);
     }
 }
